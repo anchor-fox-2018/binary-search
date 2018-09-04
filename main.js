@@ -1,3 +1,16 @@
+/**
+ * DECLARE variable left as 0
+ * DECLARE variable right as array length minus 1
+ * WHILE left is less than or equal right
+ *  DECLARE variable mid = floor (left + (right - left) / 2)
+ *  IF array index mid equal target
+ *      RETURN floor mid
+ *  IF array index mid lesser than target
+ *      left = mid + left
+ *  ELSE
+ *      right = mid - left
+ * RETURN -1
+ */
 function binary_search(target, array) {
     let left = 0; let right = array.length - 1;
     while (left <= right) {
