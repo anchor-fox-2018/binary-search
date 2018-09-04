@@ -1,3 +1,20 @@
+/*
+CREATE FUNCTION binary_search with param num, arr, beggining index (a), end index(b)
+  STORE mid with middle index of arr rounded down
+  STORE midValue with the value of arr in index mid
+
+  IF beggining greater than end
+    RETURN -1
+  ELSE IF midValue bigger than num
+    DO recursive with param num, arr , beggining, and mid - 1
+  ELSE IF midValue less than num
+   DO recursive with param num, arr, end, and mid + 1
+  ELSE 
+    RETURN mid
+  ENDIF
+ENDFUNCTION
+*/
+
 function binary_search(num, arr, a = 0, b = arr.length - 1) {
   let mid = Math.floor((a + b) / 2);
   let midValue = arr[mid];
